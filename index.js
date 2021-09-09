@@ -1,9 +1,11 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 8000;
 
-// serve the public directory as a static content here
+app.use(cors());
 
+// serve the public directory as a static content here
 
 let database = [
   { id: 1, latitude: 60, longitude: 70 },
